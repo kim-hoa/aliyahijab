@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aliyahijabs Flash Sale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 text-gray-800">
+
+  <header class="bg-yellow-400 text-white py-10 px-4 text-center">
+    <h1 class="text-4xl font-semibold">Aliyahijabs Collection</h1>
+    <p class="text-lg mt-2">Hijab Instan Anak & Remaja, Lucu & Nyaman</p>
+    <div class="mt-6">
+      <a href="https://s.shopee.co.id/3AwrOI8bgh" class="bg-white text-yellow-500 font-bold px-6 py-3 rounded-full shadow hover:bg-yellow-100 transition">🛒 Beli Sekarang</a>
+    </div>
+  </header>
+
+  <section class="text-center py-10 px-4">
+    <h2 class="text-2xl font-semibold mb-4">🔥 Flash Sale Berakhir Dalam:</h2>
+    <div id="countdown" class="text-4xl font-bold text-yellow-500"></div>
+  </section>
+
+  <section class="py-10 px-4 max-w-6xl mx-auto">
+    <h2 class="text-center text-2xl font-semibold mb-8">✨ Keunggulan Produk</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold mb-2">👧 Desain Anak & Remaja</h3>
+        <p>Hijab instan serut yang mudah dipakai, cocok untuk TK hingga remaja.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold mb-2">🌈 Warna Lembut</h3>
+        <p>Warna-warna pastel cerah bikin anak makin percaya diri dan ceria!</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold mb-2">🧵 Adem & Nyaman</h3>
+        <p>Bahan lembut dan tidak panas, nyaman dipakai seharian.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 px-4 max-w-6xl mx-auto">
+    <h2 class="text-center text-2xl font-semibold mb-6">📷 Galeri Foto</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <img src="https://via.placeholder.com/400x500.png?text=Hijab+1" class="rounded-lg shadow" alt="Foto Hijab 1" />
+      <img src="https://via.placeholder.com/400x500.png?text=Hijab+2" class="rounded-lg shadow" alt="Foto Hijab 2" />
+      <img src="https://via.placeholder.com/400x500.png?text=Hijab+3" class="rounded-lg shadow" alt="Foto Hijab 3" />
+    </div>
+  </section>
+
+  <section class="py-10 px-4 max-w-6xl mx-auto">
+    <h2 class="text-center text-2xl font-semibold mb-6">🎥 Video Produk</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <iframe class="w-full h-64 rounded-lg shadow" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <iframe class="w-full h-64 rounded-lg shadow" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer class="bg-yellow-400 text-white py-6 text-center">
+    <p>&copy; 2025 Aliyahijabs. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const countdown = document.getElementById('countdown');
+    const deadline = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000); // 3 hari ke depan
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+
+      if (diff <= 0) {
+        countdown.textContent = "Waktu Habis!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdown.textContent = `${days}h ${hours}j ${minutes}m ${seconds}d`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
