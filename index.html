@@ -1,95 +1,89 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aliyahijabs Flash Sale</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aliyahijabs Collection</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
+    #timer span { font-weight: bold; }
   </style>
 </head>
-<body class="bg-yellow-50 text-gray-800">
-
-  <header class="bg-yellow-400 text-white py-10 px-4 text-center">
-    <h1 class="text-4xl font-semibold">Aliyahijabs Collection</h1>
-    <p class="text-lg mt-2">Hijab Instan Anak & Remaja, Lucu & Nyaman</p>
-    <div class="mt-6">
-      <a href="https://s.shopee.co.id/3AwrOI8bgh" class="bg-white text-yellow-500 font-bold px-6 py-3 rounded-full shadow hover:bg-yellow-100 transition">🛒 Beli Sekarang</a>
-    </div>
+<body class="bg-white text-gray-800">
+  <header class="text-center py-8 bg-pink-100">
+    <h1 class="text-3xl font-bold">Aliyahijabs Collection</h1>
+    <p class="text-sm mt-2">Fashion Hijab Elegan & Terjangkau</p>
   </header>
 
-  <section class="text-center py-10 px-4">
-    <h2 class="text-2xl font-semibold mb-4">🔥 Flash Sale Berakhir Dalam:</h2>
-    <div id="countdown" class="text-4xl font-bold text-yellow-500"></div>
-  </section>
-
-  <section class="py-10 px-4 max-w-6xl mx-auto">
-    <h2 class="text-center text-2xl font-semibold mb-8">✨ Keunggulan Produk</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-lg shadow text-center">
-        <h3 class="text-xl font-semibold mb-2">👧 Desain Anak & Remaja</h3>
-        <p>Hijab instan serut yang mudah dipakai, cocok untuk TK hingga remaja.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow text-center">
-        <h3 class="text-xl font-semibold mb-2">🌈 Warna Lembut</h3>
-        <p>Warna-warna pastel cerah bikin anak makin percaya diri dan ceria!</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow text-center">
-        <h3 class="text-xl font-semibold mb-2">🧵 Adem & Nyaman</h3>
-        <p>Bahan lembut dan tidak panas, nyaman dipakai seharian.</p>
-      </div>
+  <!-- Countdown Flash Sale -->
+  <section class="text-center my-8">
+    <h2 class="text-xl font-semibold mb-2">Flash Sale Berakhir Dalam:</h2>
+    <div id="timer" class="text-2xl text-red-600 space-x-2">
+      <span id="days">00</span> :
+      <span id="hours">00</span> :
+      <span id="minutes">00</span> :
+      <span id="seconds">00</span>
     </div>
   </section>
 
-  <section class="py-10 px-4 max-w-6xl mx-auto">
-    <h2 class="text-center text-2xl font-semibold mb-6">📷 Galeri Foto</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <img src="https://via.placeholder.com/400x500.png?text=Hijab+1" class="rounded-lg shadow" alt="Foto Hijab 1" />
-      <img src="https://via.placeholder.com/400x500.png?text=Hijab+2" class="rounded-lg shadow" alt="Foto Hijab 2" />
-      <img src="https://via.placeholder.com/400x500.png?text=Hijab+3" class="rounded-lg shadow" alt="Foto Hijab 3" />
+  <!-- Slider Galeri -->
+  <section class="max-w-4xl mx-auto px-4">
+    <h2 class="text-center text-xl font-semibold mb-4">Galeri Koleksi</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="https://via.placeholder.com/600" data-lightbox="gallery"><img src="https://via.placeholder.com/300" alt="Produk 1" class="rounded-lg"></a>
+      <a href="https://via.placeholder.com/600" data-lightbox="gallery"><img src="https://via.placeholder.com/300" alt="Produk 2" class="rounded-lg"></a>
+      <a href="https://via.placeholder.com/600" data-lightbox="gallery"><img src="https://via.placeholder.com/300" alt="Produk 3" class="rounded-lg"></a>
+      <a href="https://via.placeholder.com/600" data-lightbox="gallery"><img src="https://via.placeholder.com/300" alt="Produk 4" class="rounded-lg"></a>
     </div>
   </section>
 
-  <section class="py-10 px-4 max-w-6xl mx-auto">
-    <h2 class="text-center text-2xl font-semibold mb-6">🎥 Video Produk</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <iframe class="w-full h-64 rounded-lg shadow" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-      <iframe class="w-full h-64 rounded-lg shadow" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
-    </div>
+  <!-- Form Order WhatsApp -->
+  <section class="max-w-md mx-auto my-12 p-4 bg-pink-50 rounded-xl">
+    <h2 class="text-lg font-bold mb-4">Order Sekarang</h2>
+    <form id="orderForm" class="space-y-4">
+      <input type="text" id="name" placeholder="Nama Anda" class="w-full border p-2 rounded" required>
+      <input type="text" id="product" placeholder="Nama Produk" class="w-full border p-2 rounded" required>
+      <input type="text" id="size" placeholder="Ukuran (All Size / M / L / XL)" class="w-full border p-2 rounded">
+      <textarea id="note" placeholder="Catatan tambahan..." class="w-full border p-2 rounded"></textarea>
+      <button type="submit" class="bg-green-500 hover:bg-green-600 text-white w-full py-2 rounded">Kirim ke WhatsApp</button>
+    </form>
   </section>
 
-  <footer class="bg-yellow-400 text-white py-6 text-center">
-    <p>&copy; 2025 Aliyahijabs. All rights reserved.</p>
+  <footer class="text-center text-sm py-6 text-gray-500">
+    &copy; 2025 Aliyahijabs. All rights reserved.
   </footer>
 
   <script>
-    const countdown = document.getElementById('countdown');
-    const deadline = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000); // 3 hari ke depan
+    // Countdown Flash Sale
+    const countdownDate = new Date("2025-08-05T23:59:59").getTime();
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("days").innerText = d.toString().padStart(2, '0');
+      document.getElementById("hours").innerText = h.toString().padStart(2, '0');
+      document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
+      document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
+      if (distance < 0) clearInterval(timer);
+    }, 1000);
 
-    function updateCountdown() {
-      const now = new Date();
-      const diff = deadline - now;
-
-      if (diff <= 0) {
-        countdown.textContent = "Waktu Habis!";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      countdown.textContent = `${days}h ${hours}j ${minutes}m ${seconds}d`;
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    // WhatsApp Order
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const product = document.getElementById("product").value;
+      const size = document.getElementById("size").value;
+      const note = document.getElementById("note").value;
+      const phone = "6281234567890"; // ganti dengan nomor WA kamu
+      const message = `Halo Admin Aliyahijab%0ASaya ingin order:%0A%0ANama: ${name}%0AProduk: ${product}%0AUkuran: ${size}%0ACatatan: ${note}%0A%0ATerima kasih!`;
+      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    });
   </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
